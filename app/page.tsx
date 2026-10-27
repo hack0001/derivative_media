@@ -6,7 +6,6 @@ import WorkReel from "@/components/WorkReel";
 import Process from "@/components/Process";
 import Marquee from "@/components/Marquee";
 import Contact from "@/components/Contact";
-import PalettePicker from "@/components/PalettePicker";
 import { site } from "@/lib/content";
 
 export default function Home() {
@@ -28,7 +27,6 @@ export default function Home() {
           <code>f′(you) &gt; 0</code>
         </div>
       </footer>
-      {site.showPalettePicker && <PalettePicker />}
     </>
   );
 }

@@ -17,8 +17,7 @@ All words, services, projects and process steps live in `lib/content.ts`.
 
 - **Projects**: replace the sample entries. Put screenshots in `public/work/` and set `image: "/work/your-shot.jpg"` (16:10 works best), then remove `sample: true`.
 - **Email**: set `site.email`.
-- **Palette**: try the three palettes with the switcher in the bottom-right corner. When you have picked one, set `defaultPalette` to it and `showPalettePicker: false`.
-- **Colours and fonts**: `app/globals.css` (palettes at the top) and `app/layout.tsx` (Google Fonts via `next/font`).
+- **Colours and fonts**: `app/globals.css` (colour tokens at the top) and `app/layout.tsx` (Google Fonts via `next/font`).
 
 ## Deploy to Vercel
 

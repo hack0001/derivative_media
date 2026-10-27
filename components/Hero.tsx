@@ -49,9 +49,9 @@ export default function Hero() {
     const readColors = () => {
       const s = getComputedStyle(document.documentElement);
       colors = {
-        line: s.getPropertyValue("--hero-line").trim(),
-        muted: s.getPropertyValue("--hero-muted").trim(),
-        accent: s.getPropertyValue("--hero-accent").trim(),
+        line: s.getPropertyValue("--line").trim(),
+        muted: s.getPropertyValue("--muted").trim(),
+        accent: s.getPropertyValue("--accent").trim(),
       };
     };
     const size = () => {
@@ -60,8 +60,8 @@ export default function Hero() {
       cv.width = W * dpr; cv.height = H * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     };
-    const f = (x: number, t: number) => H * 0.42 + H * 0.1 * Math.sin(x * 0.0058 + t) + H * 0.05 * Math.sin(x * 0.0137 - t * 0.7);
-    const fp = (x: number, t: number) => H * 0.1 * 0.0058 * Math.cos(x * 0.0058 + t) + H * 0.05 * 0.0137 * Math.cos(x * 0.0137 - t * 0.7);
+    const f = (x: number, t: number) => H * 0.66 + H * 0.09 * Math.sin(x * 0.0058 + t) + H * 0.05 * Math.sin(x * 0.0137 - t * 0.7);
+    const fp = (x: number, t: number) => H * 0.09 * 0.0058 * Math.cos(x * 0.0058 + t) + H * 0.05 * 0.0137 * Math.cos(x * 0.0137 - t * 0.7);
 
     const host = cv.parentElement!;
     const onMove = (e: PointerEvent) => { mouseX = e.clientX - cv.getBoundingClientRect().left; };
@@ -73,9 +73,9 @@ export default function Hero() {
       const t = reduce ? 0.6 : ts / 4200;
       if (frame++ % 30 === 0) readColors();
       ctx.clearRect(0, 0, W, H);
-      ctx.strokeStyle = colors.line; ctx.lineWidth = 1;
+      ctx.strokeStyle = colors.line; ctx.lineWidth = 1; ctx.globalAlpha = 0.45;
       for (let gx = 0; gx < W; gx += 64) { ctx.beginPath(); ctx.moveTo(gx + 0.5, 0); ctx.lineTo(gx + 0.5, H); ctx.stroke(); }
-      ctx.strokeStyle = colors.muted; ctx.lineWidth = 1.5; ctx.globalAlpha = 0.7;
+      ctx.globalAlpha = 1; ctx.strokeStyle = colors.muted; ctx.lineWidth = 1.5; ctx.globalAlpha = 0.55;
       ctx.beginPath();
       for (let x = 0; x <= W; x += 4) { const y = f(x, t); if (x) ctx.lineTo(x, y); else ctx.moveTo(x, y); }
       ctx.stroke(); ctx.globalAlpha = 1;

@@ -17,8 +17,7 @@ export default function Nav() {
     let ticking = false;
     const update = () => {
       ticking = false;
-      const hero = document.getElementById("top");
-      setScrolled(window.scrollY > (hero ? hero.offsetHeight - 80 : 10));
+      setScrolled(window.scrollY > 10);
       let cur = -1;
       secs.forEach((s, i) => {
         if (s && s.getBoundingClientRect().top < window.innerHeight * 0.4) cur = i;
@@ -36,7 +35,7 @@ export default function Nav() {
   return (
     <nav className={`nav${scrolled ? " scrolled" : ""}`}>
       <div className="wrap">
-        <a className="brand" href="#top">derivative media</a>
+        <a className="brand" href="#top">derivative<i>.</i>media</a>
         <ul>
           {links.map((l, i) => (
             <li key={l.href}><a href={l.href} className={i === active ? "on" : undefined}>{l.label}</a></li>

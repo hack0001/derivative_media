@@ -14,18 +14,7 @@ export const site = {
     "We design and hand-code fast websites for businesses, trades and makers. Every page is built for the job it has to do, and every millisecond of load time is accounted for.",
   manifestoHighlights: ["hand-code", "fast", "millisecond"],
   places: ["North Wales", "Chester", "Liverpool", "Manchester", "Cardiff", "London", "Anywhere with Wi-Fi"],
-  // Show the palette switcher in the corner. Set to false once you have picked a palette,
-  // and set defaultPalette to your choice.
-  showPalettePicker: true,
-  defaultPalette: "klein" as Palette,
 };
-
-export type Palette = "klein" | "dragon" | "ember";
-export const palettes: { id: Palette; label: string; swatch: string }[] = [
-  { id: "klein", label: "Klein blue", swatch: "#1d2bff" },
-  { id: "dragon", label: "Dragon red", swatch: "#c8102e" },
-  { id: "ember", label: "Ember", swatch: "#ff5a1f" },
-];
 
 export type Service = { tag: string; title: string; body: string; icon: "build" | "shop" | "app" | "perf" | "care" | "motion" };
 export const services: Service[] = [
