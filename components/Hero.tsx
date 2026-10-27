@@ -60,8 +60,11 @@ export default function Hero() {
       cv.width = W * dpr; cv.height = H * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     };
-    const f = (x: number, t: number) => H * 0.66 + H * 0.09 * Math.sin(x * 0.0058 + t) + H * 0.05 * Math.sin(x * 0.0137 - t * 0.7);
-    const fp = (x: number, t: number) => H * 0.09 * 0.0058 * Math.cos(x * 0.0058 + t) + H * 0.05 * 0.0137 * Math.cos(x * 0.0137 - t * 0.7);
+    // the curve lives in the band below the text
+    const amp = () => Math.min(H * 0.05, 44);
+    const base = () => H - Math.min(H * 0.13, 120);
+    const f = (x: number, t: number) => base() + amp() * Math.sin(x * 0.0058 + t) + amp() * 0.55 * Math.sin(x * 0.0137 - t * 0.7);
+    const fp = (x: number, t: number) => amp() * 0.0058 * Math.cos(x * 0.0058 + t) + amp() * 0.55 * 0.0137 * Math.cos(x * 0.0137 - t * 0.7);
 
     const host = cv.parentElement!;
     const onMove = (e: PointerEvent) => { mouseX = e.clientX - cv.getBoundingClientRect().left; };

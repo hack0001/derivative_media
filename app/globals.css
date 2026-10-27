@@ -1,10 +1,10 @@
 /* Layout: a slate-dark studio page. Typed intro over a live tangent-line curve, then sticky scroll chapters: manifesto, services grid, horizontal work reel, process, contact. */
 :root{
-  --bg:#111418; --surface:#181c21; --raise:#1f242a; --line:#2a3038;
-  --fg:#e9ecef; --muted:#8b939d; --accent:#f2c14e; --accent-ink:#111418;
-  --display:var(--font-display),"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
-  --body:var(--font-body),"Instrument Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
-  --mono:var(--font-mono),"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --bg:#0f1318; --surface:#161b22; --raise:#1d232c; --line:#28303b;
+  --fg:#e8edf3; --muted:#8a94a3; --accent:#5b9dff; --accent-ink:#0b1220;
+  --display:var(--font-display),"Geist",ui-sans-serif,system-ui,sans-serif;
+  --body:var(--font-display),"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:var(--font-mono),"Geist Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
   --gutter-l:max(16px,env(safe-area-inset-left,0px));
   --gutter-r:max(16px,env(safe-area-inset-right,0px));
   --max:1180px;
@@ -12,14 +12,14 @@
 }
 @media (prefers-color-scheme: light){
   :root:not([data-theme="dark"]){
-    --bg:#eef0f2; --surface:#ffffff; --raise:#e4e7eb; --line:#d3d8de;
-    --fg:#14181d; --muted:#5b636d; --accent:#a87400; --accent-ink:#ffffff;
+    --bg:#eef1f5; --surface:#ffffff; --raise:#e3e8ef; --line:#d0d7e1;
+    --fg:#121821; --muted:#586374; --accent:#1d5fd8; --accent-ink:#ffffff;
     color-scheme:light;
   }
 }
 :root[data-theme="light"]{
-  --bg:#eef0f2; --surface:#ffffff; --raise:#e4e7eb; --line:#d3d8de;
-  --fg:#14181d; --muted:#5b636d; --accent:#a87400; --accent-ink:#ffffff;
+  --bg:#eef1f5; --surface:#ffffff; --raise:#e3e8ef; --line:#d0d7e1;
+  --fg:#121821; --muted:#586374; --accent:#1d5fd8; --accent-ink:#ffffff;
   color-scheme:light;
 }
 *{box-sizing:border-box}
@@ -48,16 +48,17 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.02em;line-h
 /* hero */
 .hero{position:relative;min-height:88svh;display:grid;align-items:center;overflow:hidden}
 #curve{position:absolute;inset:0;width:100%;height:100%;display:block}
-.hero .wrap{position:relative;width:100%;padding-block:12vh 10vh}
-.typed{font-family:var(--display);font-weight:700;font-size:clamp(52px,11vw,152px);letter-spacing:-.045em;line-height:.95;margin:0;min-height:1em;white-space:nowrap}
+.hero .wrap{position:relative;z-index:1;width:100%;padding-block:10vh 26vh}
+.typed{font-family:var(--display);font-weight:700;font-size:clamp(50px,10.5vw,152px);letter-spacing:-.045em;line-height:.95;margin:0;min-height:1em;overflow-wrap:normal}
+@media (max-width:600px){.typed{font-size:clamp(50px,17vw,96px);max-width:6.2em}}
 .sub{font-family:var(--mono);font-size:clamp(16px,2.3vw,26px);color:var(--muted);margin:22px 0 0;min-height:1.4em;letter-spacing:-.01em}
 .sub .acc{color:var(--accent)}
 .caret{display:inline-block;width:.08em;min-width:3px;height:.86em;background:var(--accent);vertical-align:-.06em;margin-left:.04em;animation:blink 1.05s steps(1) infinite}
 .sub .caret{width:.55em;height:1.05em;vertical-align:-.18em;opacity:.85}
 @keyframes blink{50%{opacity:0}}
-.hero-meta{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:56px;font-size:15px;color:var(--muted);opacity:1;transition:opacity .8s}
+.hero-meta{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:48px;font-size:15px;color:var(--muted);opacity:1;transition:opacity .8s}
 .hero-meta span::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);margin-right:10px;vertical-align:2px}
-.slope{position:absolute;right:var(--gutter-r);bottom:22px;font-family:var(--mono);font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums;margin-right:max(0px,calc((100vw - var(--max))/2))}
+.slope{position:absolute;right:var(--gutter-r);top:18px;font-family:var(--mono);font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums;margin-right:max(0px,calc((100vw - var(--max))/2))}
 .slope b{color:var(--accent);font-weight:500}
 
 /* manifesto: scroll-lit words */
