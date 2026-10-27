@@ -12,7 +12,7 @@ export function startHeroCurve(cv, readout) {
   const t0 = performance.now();
   let last = t0;
 
-  const css = (n) => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  const css = (n) => getComputedStyle(cv).getPropertyValue(n).trim();
   const readColors = () => { colors = { line: css("--line"), muted: css("--muted"), accent: css("--accent") }; };
   const rgba = (hex, a) => {
     const h = hex.replace("#", "");
@@ -71,14 +71,6 @@ export function startHeroCurve(cv, readout) {
 
     if (reveal <= 0) return;
     const end = W * reveal;
-
-    // soft fill under the curve up to the point
-    const grad = ctx.createLinearGradient(0, base - amp * 1.5, 0, H);
-    grad.addColorStop(0, rgba(colors.accent, 0.14)); grad.addColorStop(1, rgba(colors.accent, 0));
-    ctx.beginPath(); ctx.moveTo(0, H);
-    for (let x = 0; x <= pxv; x += 3) ctx.lineTo(x, y(x, p));
-    ctx.lineTo(pxv, y(pxv, p)); ctx.lineTo(pxv, H); ctx.closePath();
-    ctx.fillStyle = grad; ctx.fill();
 
     // the curve f(x)
     ctx.lineWidth = 1.6; ctx.strokeStyle = rgba(colors.muted, 0.85);

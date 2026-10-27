@@ -11,6 +11,7 @@ const links = [
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState(-1);
+  const [onHero, setOnHero] = useState(true);
 
   useEffect(() => {
     const secs = links.map((l) => document.querySelector(l.href));
@@ -18,6 +19,8 @@ export default function Nav() {
     const update = () => {
       ticking = false;
       setScrolled(window.scrollY > 10);
+      const hero = document.getElementById("top");
+      setOnHero(!!hero && window.scrollY < hero.offsetHeight - 64);
       let cur = -1;
       secs.forEach((s, i) => {
         if (s && s.getBoundingClientRect().top < window.innerHeight * 0.4) cur = i;
@@ -33,7 +36,7 @@ export default function Nav() {
   }, []);
 
   return (
-    <nav className={`nav${scrolled ? " scrolled" : ""}`}>
+    <nav className={`nav${scrolled ? " scrolled" : ""}${onHero ? " on-hero" : ""}`}>
       <div className="wrap">
         <a className="brand" href="#top">derivative<i>.</i>media</a>
         <ul>
