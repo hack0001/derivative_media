@@ -1,7 +1,7 @@
 /* Layout: a slate-dark studio page. Typed intro over a live tangent-line curve, then sticky scroll chapters: manifesto, services grid, horizontal work reel, process, contact. */
 :root{
-  --bg:#0f1318; --surface:#161b22; --raise:#1d232c; --line:#28303b;
-  --fg:#e8edf3; --muted:#8a94a3; --accent:#5b9dff; --accent-ink:#0b1220;
+  --bg:#131212; --surface:#1a1919; --raise:#222020; --line:#2e2b2a;
+  --fg:#efebe8; --muted:#9a928d; --accent:#f0533f; --accent-ink:#1a0c09;
   --display:var(--font-display),"Geist",ui-sans-serif,system-ui,sans-serif;
   --body:var(--font-display),"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:var(--font-mono),"Geist Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
@@ -12,14 +12,14 @@
 }
 @media (prefers-color-scheme: light){
   :root:not([data-theme="dark"]){
-    --bg:#eef1f5; --surface:#ffffff; --raise:#e3e8ef; --line:#d0d7e1;
-    --fg:#121821; --muted:#586374; --accent:#1d5fd8; --accent-ink:#ffffff;
+    --bg:#f4f1ee; --surface:#ffffff; --raise:#ebe6e2; --line:#dcd5cf;
+    --fg:#1b1715; --muted:#6a625d; --accent:#c4321f; --accent-ink:#ffffff;
     color-scheme:light;
   }
 }
 :root[data-theme="light"]{
-  --bg:#eef1f5; --surface:#ffffff; --raise:#e3e8ef; --line:#d0d7e1;
-  --fg:#121821; --muted:#586374; --accent:#1d5fd8; --accent-ink:#ffffff;
+  --bg:#f4f1ee; --surface:#ffffff; --raise:#ebe6e2; --line:#dcd5cf;
+  --fg:#1b1715; --muted:#6a625d; --accent:#c4321f; --accent-ink:#ffffff;
   color-scheme:light;
 }
 *{box-sizing:border-box}
@@ -47,7 +47,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.02em;line-h
 
 /* hero */
 .hero{position:relative;min-height:88svh;display:grid;align-items:center;overflow:hidden}
-#curve{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
 .hero .wrap{position:relative;z-index:1;width:100%;padding-block:10vh 26vh}
 .typed{font-family:var(--display);font-weight:700;font-size:clamp(50px,10.5vw,152px);letter-spacing:-.045em;line-height:.95;margin:0;min-height:1em;overflow-wrap:normal}
 @media (max-width:600px){.typed{font-size:clamp(50px,17vw,96px);max-width:6.2em}}
