@@ -22,18 +22,18 @@ const en = {
   },
   hero: {
     tagline: "website development",
-    meta: ["Hand-coded websites & web apps", "Based in Colwyn Bay, working across North Wales", "Taking projects for early 2027"],
+    meta: ["Websites & web apps tailored to you", "Based in Colwyn Bay, working across North Wales", "Taking projects for early 2027"],
   },
   manifesto: {
     eyebrow: "What we do",
-    text: "We design and hand-code fast websites for businesses, trades and councils. Every page is built for the job it has to do, and every millisecond of load time is accounted for.",
-    highlights: ["hand-code", "fast", "millisecond"],
+    text: "We design and build fast websites for businesses, trades and councils, tailored to how each one works. Every page is built for the job it has to do, and every millisecond of load time is accounted for.",
+    highlights: ["fast", "tailored", "millisecond"],
   },
   services: {
     heading: "What we build",
     sub: "Small studio, full stack. You deal with the person writing the code from the first call to the day it goes live, and after.",
     items: [
-      { tag: "/build", icon: "build", title: "Website design & build", body: "Custom, responsive sites written from scratch. No page builders, no bloated themes.", href: "/websites" },
+      { tag: "/build", icon: "build", title: "Website design & build", body: "Responsive sites tailored to your business, not squeezed into a template. Fast, flexible and built around how you work.", href: "/websites" },
       { tag: "/shop", icon: "shop", title: "Online shops", body: "Shopify and WooCommerce stores set up to take orders, payments and shipping on day one." },
       { tag: "/app", icon: "app", title: "Web apps & booking", body: "Booking systems, quote builders and customer portals shaped around how you already work." },
       { tag: "/seo", icon: "perf", title: "Local SEO & AI search", body: "Found on Google, Google Maps and AI assistants, with structured data and fast pages in every build.", href: "/local-seo" },
@@ -127,18 +127,18 @@ const cy: Dict = {
   },
   hero: {
     tagline: "datblygu gwefannau",
-    meta: ["Gwefannau ac apiau gwe wedi'u codio â llaw", "Ym Mae Colwyn, yn gweithio ar draws Gogledd Cymru", "Yn derbyn prosiectau ar gyfer dechrau 2027"],
+    meta: ["Gwefannau ac apiau gwe wedi'u teilwra i chi", "Ym Mae Colwyn, yn gweithio ar draws Gogledd Cymru", "Yn derbyn prosiectau ar gyfer dechrau 2027"],
   },
   manifesto: {
     eyebrow: "Beth rydyn ni'n ei wneud",
-    text: "Rydyn ni'n dylunio ac yn codio gwefannau cyflym â llaw ar gyfer busnesau, crefftwyr a chynghorau. Mae pob tudalen wedi'i hadeiladu ar gyfer ei gwaith, ac mae pob milieiliad o amser llwytho yn cyfrif.",
-    highlights: ["codio", "cyflym", "milieiliad"],
+    text: "Rydyn ni'n dylunio ac yn adeiladu gwefannau cyflym ar gyfer busnesau, crefftwyr a chynghorau, wedi'u teilwra i'r ffordd mae pob un yn gweithio. Mae pob tudalen wedi'i hadeiladu ar gyfer ei gwaith, ac mae pob milieiliad o amser llwytho yn cyfrif.",
+    highlights: ["cyflym", "teilwra", "milieiliad"],
   },
   services: {
     heading: "Beth rydyn ni'n ei adeiladu",
     sub: "Stiwdio fach, y stac llawn. Rydych chi'n delio â'r person sy'n ysgrifennu'r cod o'r alwad gyntaf hyd at y diwrnod mae'r wefan yn mynd yn fyw, a thu hwnt.",
     items: [
-      { tag: "/adeiladu", icon: "build", title: "Dylunio ac adeiladu gwefannau", body: "Gwefannau ymatebol wedi'u hysgrifennu o'r dechrau. Dim adeiladwyr tudalennau, dim themâu trwm.", href: "/cy/gwefannau" },
+      { tag: "/adeiladu", icon: "build", title: "Dylunio ac adeiladu gwefannau", body: "Gwefannau ymatebol wedi'u teilwra i'ch busnes, nid wedi'u gwasgu i dempled. Cyflym, hyblyg ac wedi'u hadeiladu o gwmpas y ffordd rydych chi'n gweithio.", href: "/cy/gwefannau" },
       { tag: "/siop", icon: "shop", title: "Siopau ar-lein", body: "Siopau Shopify a WooCommerce sy'n barod i dderbyn archebion, taliadau a danfon o'r diwrnod cyntaf." },
       { tag: "/ap", icon: "app", title: "Apiau gwe ac archebu", body: "Systemau archebu, cyfrifianellau dyfynbris a phyrth cwsmeriaid wedi'u siapio o gwmpas y ffordd rydych chi'n gweithio." },
       { tag: "/seo", icon: "perf", title: "SEO lleol a chwilio AI", body: "Cael eich canfod ar Google, Google Maps a chynorthwywyr AI, gyda data strwythuredig a thudalennau cyflym ym mhob gwefan.", href: "/cy/seo-lleol" },

@@ -29,7 +29,7 @@ const websites: Doc = {
     eyebrow: "Pillar · Building websites",
     lead: "Everything I've learned about building websites that work for small businesses, councils and charities in North Wales: what they need, what they cost, and how to get one built well.",
     aside: { heading: "Every site I build includes", items: [
-      "Hand-written code, no page builder",
+      "Tailored to you, not restricted by a template",
       "Designed for phones first",
       "Pages that load in about a second",
       "Google Business Profile setup or tidy",
@@ -82,7 +82,7 @@ const websites: Doc = {
     eyebrow: "Colofn · Adeiladu gwefannau",
     lead: "Popeth rydw i wedi'i ddysgu am adeiladu gwefannau sy'n gweithio i fusnesau bach, cynghorau ac elusennau yng Ngogledd Cymru: beth sydd ei angen, faint mae'n ei gostio, a sut i gael un wedi'i hadeiladu'n dda.",
     aside: { heading: "Mae pob gwefan yn cynnwys", items: [
-      "Cod wedi'i ysgrifennu â llaw, dim adeiladwr tudalennau",
+      "Wedi'i theilwra i chi, heb gyfyngiadau templed",
       "Wedi'i dylunio ar gyfer ffonau yn gyntaf",
       "Tudalennau sy'n llwytho mewn tua eiliad",
       "Sefydlu neu dacluso Proffil Busnes Google",
@@ -398,9 +398,9 @@ const about: Doc = {
     blocks: [
       { type: "h2", text: "Local, and personal" },
       { type: "p", text: "I'm Tom Patel, a web developer based in Colwyn Bay. I've been writing code for a long time, and Derivative Media is where I now put it to work for businesses, councils and community groups across North Wales." },
-      { type: "p", text: "I'm building the business one local project at a time, starting with the [Llansannan Community Council website](/work/llansannan-community-council). If you'd like to be one of the next, I'd be glad to hear from you." },
+      { type: "p", text: "I'm building the business one local project at a time. Recent work includes the bilingual [Llansannan Community Council website](/work/llansannan-community-council). If you have a project in mind, I'd be glad to hear from you." },
       { type: "h2", text: "How I work" },
-      { type: "p", text: "I write every website by hand rather than starting from a template. It takes more care, but the result is faster, easier to find on Google and built around how your business actually works." },
+      { type: "p", text: "Every website is tailored to the business it's for, rather than squeezed into a template. That means it's built around how you actually work, with no limits on layout or features, and it stays fast and easy to find on Google." },
       { type: "p", text: "I care about the details most people never see: how quickly a page appears on a phone with one bar of signal, whether a screen reader can make sense of it, and whether Google can tell exactly what you do and where." },
       { type: "h2", text: "Who I work with" },
       { type: "p", text: "Small businesses, trades, tourism and hospitality, charities and [community councils](/for/community-councils) across North Wales, including [bilingual Welsh and English sites](/websites/bilingual). See the [areas I cover](/areas)." },
@@ -416,9 +416,9 @@ const about: Doc = {
     blocks: [
       { type: "h2", text: "Lleol, a phersonol" },
       { type: "p", text: "Tom Patel ydw i, datblygwr gwe ym Mae Colwyn. Rydw i wedi bod yn ysgrifennu cod ers amser hir, a Derivative Media yw lle rydw i nawr yn ei roi ar waith i fusnesau, cynghorau a grwpiau cymunedol ar draws Gogledd Cymru." },
-      { type: "p", text: "Rydw i'n adeiladu'r busnes un prosiect lleol ar y tro, gan ddechrau gyda gwefan Cyngor Cymuned Llansannan. Os hoffech chi fod yn un o'r rhai nesaf, byddwn i'n falch o glywed gennych chi." },
+      { type: "p", text: "Rydw i'n adeiladu'r busnes un prosiect lleol ar y tro. Mae gwaith diweddar yn cynnwys gwefan ddwyieithog [Cyngor Cymuned Llansannan](/work/llansannan-community-council). Os oes gennych chi brosiect mewn golwg, byddwn i'n falch o glywed gennych chi." },
       { type: "h2", text: "Sut rydw i'n gweithio" },
-      { type: "p", text: "Rydw i'n ysgrifennu pob gwefan â llaw yn hytrach na dechrau gyda thempled. Mae'n cymryd mwy o ofal, ond mae'r canlyniad yn gyflymach, yn haws i'w ganfod ar Google ac wedi'i adeiladu o gwmpas y ffordd mae eich busnes yn gweithio." },
+      { type: "p", text: "Mae pob gwefan wedi'i theilwra i'r busnes, yn hytrach na'i gwasgu i dempled. Mae hynny'n golygu ei bod wedi'i hadeiladu o gwmpas y ffordd rydych chi'n gweithio, heb gyfyngiadau ar y dyluniad na'r nodweddion, ac mae'n aros yn gyflym ac yn hawdd ei chanfod ar Google." },
       { type: "h2", text: "Gyda phwy rydw i'n gweithio" },
       { type: "p", text: "Busnesau bach, crefftwyr, twristiaeth a lletygarwch, elusennau a [chynghorau cymuned](/cy/cynghorau-cymuned) ar draws Gogledd Cymru, gan gynnwys [gwefannau dwyieithog](/cy/gwefannau-dwyieithog)." },
     ],

@@ -10,7 +10,7 @@ export const businessSchema = {
   url: site.url,
   email: site.email,
   description:
-    "Web design and development studio in Colwyn Bay, North Wales, run by Tom Patel. Hand-coded websites, bilingual Welsh and English sites, community council websites, local SEO and AI search optimisation.",
+    "Web design and development studio in Colwyn Bay, North Wales, run by Tom Patel. Tailored websites, bilingual Welsh and English sites, community council websites, local SEO and AI search optimisation.",
   address: { "@type": "PostalAddress", addressLocality: site.base, addressRegion: site.region, addressCountry: "GB" },
   areaServed: ["Colwyn Bay", "Llanrwst", "Conwy Valley", "Llansannan", "Abergele", "Denbigh", "Conwy", "Llandudno", "North Wales"].map((name) => ({ "@type": "Place", name })),
   knowsLanguage: ["en", "cy"],
