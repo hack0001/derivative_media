@@ -1,45 +1,28 @@
-// Edit the site's words here. Everything on the page reads from this file.
+// Business details and projects. Interface text (English and Welsh) lives in lib/i18n.ts;
+// page content lives in lib/docs.ts, lib/articles.ts and lib/areas.ts.
 
 export const site = {
   name: "Derivative Media Ltd",
+  url: "https://derivativemedia.co.uk",
+  base: "Colwyn Bay",
+  region: "Conwy",
+  // Feeds the About page and Google's structured data.
+  owner: {
+    name: "Tom Patel",
+    role: "Founder & web developer",
+    photo: "", // e.g. "/about/headshot.jpg" (put the file in public/about/)
+  },
   brand: "derivative media",
   tagline: "website development",
   email: "hello@derivativemedia.co.uk", // TODO: replace with your real address
-  heroMeta: [
-    "Hand-coded websites & web apps",
-    "Based in North Wales, working UK-wide",
-    "Taking projects for early 2027",
-  ],
-  manifesto:
-    "We design and hand-code fast websites for businesses, trades and makers. Every page is built for the job it has to do, and every millisecond of load time is accounted for.",
-  manifestoHighlights: ["hand-code", "fast", "millisecond"],
-  places: ["North Wales", "Chester", "Liverpool", "Manchester", "Cardiff", "London", "Anywhere with Wi-Fi"],
 };
 
-export type Service = { tag: string; title: string; body: string; icon: "build" | "shop" | "app" | "perf" | "care" | "motion" };
-export const services: Service[] = [
-  { tag: "/build", icon: "build", title: "Website design & build", body: "Custom, responsive sites written from scratch. No page builders, no bloated themes." },
-  { tag: "/shop", icon: "shop", title: "Online shops", body: "Shopify and WooCommerce stores set up to take orders, payments and shipping on day one." },
-  { tag: "/app", icon: "app", title: "Web apps & booking", body: "Booking systems, quote builders and customer portals shaped around how you already work." },
-  { tag: "/perf", icon: "perf", title: "Speed, SEO & access", body: "Core Web Vitals, structured data and WCAG 2.2 AA checks are part of every build." },
-  { tag: "/care", icon: "care", title: "Hosting & care plans", body: "Updates, backups, uptime monitoring and small monthly changes, handled for a fixed fee." },
-  { tag: "/motion", icon: "motion", title: "Brand & motion", body: "Logos, type choices and the small animations that make a site feel finished." },
-];
-
-// `screen` picks one of the CSS-drawn mockups (s1–s4). Swap for `image: "/work/x.jpg"` once you have screenshots.
-export type Project = { title: string; summary: string; url: string; stack: [string, string]; screen?: "s1" | "s2" | "s3" | "s4"; image?: string; sample?: boolean };
+// `screen` picks one of the CSS-drawn mockups (s1–s5). Swap for `image: "/work/x.jpg"` once you have screenshots.
+export type Project = { title: string; summary: string; url: string; stack: [string, string]; screen?: "s1" | "s2" | "s3" | "s4" | "s5"; image?: string; sample?: boolean; href?: string; key: string };
 export const projects: Project[] = [
-  { title: "Holiday cottages", summary: "Booking site with live availability and deposits", url: "cottages-by-the-sea.co.uk", stack: ["Astro · Stripe", "iCal sync"], screen: "s1", sample: true },
-  { title: "Coffee roaster", summary: "Shopify store with subscriptions", url: "roastery-shop.com/collections", stack: ["Shopify · Liquid", "Recharge"], screen: "s2", sample: true },
-  { title: "Outdoor activity centre", summary: "Session booking with weather-aware scheduling", url: "adventure-centre.wales/book", stack: ["Next.js · Postgres", "Met Office API"], screen: "s3", sample: true },
-  { title: "Building firm portal", summary: "Online quoting and job tracking for customers", url: "app.trades-quotes.co.uk", stack: ["Laravel · Vue", "Xero"], screen: "s4", sample: true },
+  { key: "llansannan", title: "Llansannan Community Council", summary: "Bilingual council website with ten years of minutes and a clerk-friendly editor", url: "llansannan-cc.gov.wales", stack: ["Astro · Decap CMS", "Cymraeg / English"], screen: "s5", href: "/work/llansannan-community-council" },
+  { key: "cottages", title: "Holiday cottages", summary: "Booking site with live availability and deposits", url: "cottages-by-the-sea.co.uk", stack: ["Astro · Stripe", "iCal sync"], screen: "s1", sample: true },
+  { key: "roaster", title: "Coffee roaster", summary: "Shopify store with subscriptions", url: "roastery-shop.com/collections", stack: ["Shopify · Liquid", "Recharge"], screen: "s2", sample: true },
+  { key: "outdoor", title: "Outdoor activity centre", summary: "Session booking with weather-aware scheduling", url: "adventure-centre.wales/book", stack: ["Next.js · Postgres", "Met Office API"], screen: "s3", sample: true },
 ];
 
-export const steps = [
-  { title: "Discovery call", body: "We talk through what the site needs to do, who it is for and what success looks like.", when: "Week 1" },
-  { title: "Design in the browser", body: "You review real pages on a private link, on your own phone, from the first draft.", when: "Weeks 1–3" },
-  { title: "Build & test", body: "Content goes in, every page is tested for speed, accessibility and on real devices.", when: "Weeks 3–5" },
-  { title: "Launch & look after", body: "We handle the domain, hosting and go-live, then stay on hand for changes.", when: "Week 6 onward" },
-];
-
-export const projectTypes = ["New website", "Online shop", "Web app or booking system", "Redesign of an existing site", "Care plan / ongoing support"];

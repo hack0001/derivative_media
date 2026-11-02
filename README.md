@@ -13,15 +13,25 @@ Open http://localhost:3000.
 
 ## Edit the content
 
-All words, services, projects and process steps live in `lib/content.ts`.
+| What | Where |
+|---|---|
+| Business details, projects | `lib/content.ts` |
+| Interface text, homepage copy (English + Welsh) | `lib/i18n.ts` |
+| Pillar hubs, councils, bilingual, About (English + Welsh) | `lib/docs.ts` |
+| Articles (cluster pages under each pillar) | `lib/articles.ts` |
+| Area pages and the "Also covering" list | `lib/areas.ts` |
+| Llansannan case study | `app/(en)/work/llansannan-community-council/page.tsx` |
+| Colours, layout | `app/globals.css` |
 
-- **Projects**: replace the sample entries. Put screenshots in `public/work/` and set `image: "/work/your-shot.jpg"` (16:10 works best), then remove `sample: true`.
-- **Email**: set `site.email`.
-- **Colours and fonts**: `app/globals.css` (colour tokens at the top) and `app/layout.tsx` (Google Fonts via `next/font`).
+Pages are written as simple blocks (headings, paragraphs, ticks, FAQs). Inline links use `[text](/path)`.
+Adding an article to `lib/articles.ts` publishes it, links it from its pillar and footer, and adds it to the sitemap.
+
+English pages live in `app/(en)`, Welsh pages in `app/(cy)/cy`. Each has its own root layout so `<html lang>` is right.
+Welsh/English page pairs (for the language switch and hreflang) are listed in `pairs` in `lib/i18n.ts`.
 
 ## Deploy to Vercel
 
-1. Push this folder to a GitHub repository.
+1. Push this folder to GitHub (already connected to Vercel).
 2. In Vercel, choose **Add New → Project**, import the repo and keep the defaults (framework: Next.js).
 3. Add environment variables for the contact form (Settings → Environment Variables):
    - `RESEND_API_KEY` — from https://resend.com

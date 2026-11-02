@@ -1,11 +1,11 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { site } from "@/lib/content";
+import { t, type Lang } from "@/lib/i18n";
 
-const words = site.manifesto.split(" ");
-const hi = new Set(site.manifestoHighlights);
-
-export default function Manifesto() {
+export default function Manifesto({ lang = "en" }: { lang?: Lang }) {
+  const m = t(lang).manifesto;
+  const words = m.text.split(" ");
+  const hi = new Set(m.highlights);
   const ref = useRef<HTMLElement>(null);
   const [lit, setLit] = useState(0);
 
@@ -24,17 +24,17 @@ export default function Manifesto() {
     update();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [words.length]);
 
   return (
-    <section className="manifesto" ref={ref} aria-label="What we do">
+    <section className="manifesto" ref={ref} aria-label={m.eyebrow}>
       <div className="stick">
         <div className="wrap">
-          <p className="eyebrow"><b>01</b>&nbsp; What we do</p>
+          <p className="eyebrow"><b>01</b>&nbsp; {m.eyebrow}</p>
           <p className="big">
             {words.map((w, i) => (
               <span key={i}>
-                <span className={`w${hi.has(w.replace(/[^\w-]/g, "")) ? " hi" : ""}${i < lit ? " lit" : ""}`}>{w}</span>{" "}
+                <span className={`w${hi.has(w.replace(/[.,;:!?]/g, "")) ? " hi" : ""}${i < lit ? " lit" : ""}`}>{w}</span>{" "}
               </span>
             ))}
           </p>

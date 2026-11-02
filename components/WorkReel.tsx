@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useRef } from "react";
+import Link from "next/link";
 import { projects, type Project } from "@/lib/content";
+import { t, type Lang } from "@/lib/i18n";
 
 function Screen({ p }: { p: Project }) {
   if (p.image) {
@@ -18,12 +20,26 @@ function Screen({ p }: { p: Project }) {
       return <div className="screen s2"><div className="logo" /><div className="grid">{Array.from({ length: 8 }, (_, i) => <div key={i} />)}</div></div>;
     case "s3":
       return <div className="screen s3"><div className="h" /><div className="p" /><div className="p p2" /><div className="btn" /><div className="chip" /></div>;
+    case "s5":
+      return (
+        <div className="screen s5">
+          <div className="top"><i /><span>Cymraeg · English</span></div>
+          <div className="title" /><div className="sub" />
+          <div className="cards">{["Meetings", "Minutes", "Notices"].map((t) => <div key={t}><b>{t}</b></div>)}</div>
+        </div>
+      );
     default:
       return <div className="screen s4"><div className="side" />{[10, 23, 36, 49, 62, 75].map((t) => <div key={t} className="row" style={{ top: `${t}%` }} />)}</div>;
   }
 }
 
-export default function WorkReel() {
+export default function WorkReel({ lang = "en" }: { lang?: Lang }) {
+  const w = t(lang).work;
+  const label = (p: Project) => {
+    const k = p.key as keyof typeof w.projects;
+    const v = w.projects[k];
+    return typeof v === "string" ? { title: p.title, summary: v } : v ?? { title: p.title, summary: p.summary };
+  };
   const secRef = useRef<HTMLElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const barRef = useRef<HTMLElement>(null);
@@ -65,8 +81,8 @@ export default function WorkReel() {
       <div className="stick">
         <div className="wrap top">
           <div>
-            <p className="eyebrow"><b>02</b>&nbsp; Selected work</p>
-            <h2>Recent projects</h2>
+            <p className="eyebrow"><b>02</b>&nbsp; {w.eyebrow}</p>
+            <h2>{w.heading}</h2>
           </div>
           <div className="progress" aria-hidden="true"><i ref={barRef} /></div>
         </div>
@@ -79,8 +95,8 @@ export default function WorkReel() {
               </div>
               <div className="meta">
                 <div>
-                  <h3>{p.title}{p.sample && <span className="sample">Sample</span>}</h3>
-                  <p>{p.summary}</p>
+                  <h3>{p.href ? <Link href={p.href}>{label(p).title}</Link> : label(p).title}{p.sample && <span className="sample">{w.sample}</span>}</h3>
+                  <p>{label(p).summary}</p>
                 </div>
                 <div className="stack">{p.stack[0]}<br />{p.stack[1]}</div>
               </div>
