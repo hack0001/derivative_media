@@ -22,7 +22,7 @@ const en = {
   },
   hero: {
     tagline: "website development",
-    meta: ["Websites & web apps tailored to you", "Based in Colwyn Bay, working across North Wales", "Taking projects for early 2027"],
+    meta: ["Websites that get found on Google", "Tailored, in Welsh and English", "Based in Colwyn Bay, working across North Wales"],
   },
   manifesto: {
     eyebrow: "What we do",
@@ -127,7 +127,7 @@ const cy: Dict = {
   },
   hero: {
     tagline: "datblygu gwefannau",
-    meta: ["Gwefannau ac apiau gwe wedi'u teilwra i chi", "Ym Mae Colwyn, yn gweithio ar draws Gogledd Cymru", "Yn derbyn prosiectau ar gyfer dechrau 2027"],
+    meta: ["Gwefannau sy'n cael eu canfod ar Google", "Wedi'u teilwra, yn Gymraeg a Saesneg", "Ym Mae Colwyn, yn gweithio ar draws Gogledd Cymru"],
   },
   manifesto: {
     eyebrow: "Beth rydyn ni'n ei wneud",
