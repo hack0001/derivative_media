@@ -17,12 +17,13 @@ export const site = {
   email: "hello@derivativemedia.co.uk", // TODO: replace with your real address
 };
 
-// `screen` picks one of the CSS-drawn mockups (s1–s5). Swap for `image: "/work/x.jpg"` once you have screenshots.
-export type Project = { title: string; summary: string; url: string; stack: [string, string]; screen?: "s1" | "s2" | "s3" | "s4" | "s5"; image?: string; sample?: boolean; href?: string; key: string };
+// Portfolio projects shown in the homepage reel. `image` is a 16:10 screenshot in public/work/.
+// `tag` labels the card (e.g. "Own project"); real client work has no tag.
+export type Project = {
+  key: string; title: string; summary: string; url: string; stack: [string, string];
+  image?: string; screen?: "s1" | "s2" | "s3" | "s4" | "s5"; tag?: "own"; href?: string; external?: string;
+};
 export const projects: Project[] = [
-  { key: "llansannan", title: "Llansannan Community Council", summary: "Bilingual council website with ten years of minutes and a clerk-friendly editor", url: "llansannan-cc.gov.wales", stack: ["Astro · Decap CMS", "Cymraeg / English"], screen: "s5", href: "/work/llansannan-community-council" },
-  { key: "cottages", title: "Holiday cottages", summary: "Booking site with live availability and deposits", url: "cottages-by-the-sea.co.uk", stack: ["Astro · Stripe", "iCal sync"], screen: "s1", sample: true },
-  { key: "roaster", title: "Coffee roaster", summary: "Shopify store with subscriptions", url: "roastery-shop.com/collections", stack: ["Shopify · Liquid", "Recharge"], screen: "s2", sample: true },
-  { key: "outdoor", title: "Outdoor activity centre", summary: "Session booking with weather-aware scheduling", url: "adventure-centre.wales/book", stack: ["Next.js · Postgres", "Met Office API"], screen: "s3", sample: true },
+  { key: "llansannan", title: "Llansannan Community Council", summary: "Bilingual council website with ten years of minutes and a clerk-friendly editor", url: "llansannan-cc.gov.wales", stack: ["Astro · Decap CMS", "Cymraeg / English"], image: "/work/llansannan.jpg", href: "/work/llansannan-community-council" },
+  { key: "cymraeg", title: "Dysgu Cymraeg", summary: "Welsh-learning web app: 40 lesson topics, flashcards, quizzes and a north/south dialect switch", url: "Dysgu Cymraeg · launching soon", stack: ["Next.js", "Welsh learning"], image: "/work/dysgu-cymraeg.jpg", tag: "own" },
 ];
-

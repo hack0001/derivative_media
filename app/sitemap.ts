@@ -20,5 +20,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...areas.map((a) => ({ url: `${base}/areas/${a.slug}`, lastModified: now })),
     ...articles.map((a) => ({ url: `${base}${a.path}`, lastModified: new Date(a.updated) })),
     { url: `${base}/work/llansannan-community-council`, lastModified: now },
+    { url: `${base}/sitemap`, lastModified: now },
   ];
 }

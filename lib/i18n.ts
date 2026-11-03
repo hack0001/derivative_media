@@ -58,11 +58,10 @@ const en = {
     eyebrow: "Selected work",
     heading: "Recent projects",
     sample: "Sample",
+    own: "Own project",
     projects: {
       llansannan: "Bilingual council website with ten years of minutes and a clerk-friendly editor",
-      cottages: { title: "Holiday cottages", summary: "Booking site with live availability and deposits" },
-      roaster: { title: "Coffee roaster", summary: "Shopify store with subscriptions" },
-      outdoor: { title: "Outdoor activity centre", summary: "Session booking with weather-aware scheduling" },
+      cymraeg: { title: "Dysgu Cymraeg", summary: "Welsh-learning web app: 40 lesson topics, flashcards, quizzes and a north/south dialect switch" },
     },
   },
   process: {
@@ -163,11 +162,10 @@ const cy: Dict = {
     eyebrow: "Gwaith dethol",
     heading: "Prosiectau diweddar",
     sample: "Enghraifft",
+    own: "Prosiect personol",
     projects: {
       llansannan: "Gwefan cyngor ddwyieithog gyda deng mlynedd o gofnodion a golygydd hawdd i'r clerc",
-      cottages: { title: "Bythynnod gwyliau", summary: "Gwefan archebu gydag argaeledd byw a blaendaliadau" },
-      roaster: { title: "Rhostiwr coffi", summary: "Siop Shopify gyda thanysgrifiadau" },
-      outdoor: { title: "Canolfan weithgareddau awyr agored", summary: "Archebu sesiynau gydag amserlen sy'n ystyried y tywydd" },
+      cymraeg: { title: "Dysgu Cymraeg", summary: "Ap gwe dysgu Cymraeg: 40 pwnc gwers, cardiau fflach, cwisiau a dewis tafodiaith y gogledd neu'r de" },
     },
   },
   process: {

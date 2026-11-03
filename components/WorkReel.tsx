@@ -7,7 +7,7 @@ import { t, type Lang } from "@/lib/i18n";
 function Screen({ p }: { p: Project }) {
   if (p.image) {
     // eslint-disable-next-line @next/next/no-img-element
-    return <div className="screen"><img src={p.image} alt={`${p.title} website`} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} /></div>;
+    return <div className="screen"><img src={p.image} alt={`Screenshot of ${p.title}`} width={1240} height={775} loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", display: "block" }} /></div>;
   }
   switch (p.screen) {
     case "s1":
@@ -95,7 +95,7 @@ export default function WorkReel({ lang = "en" }: { lang?: Lang }) {
               </div>
               <div className="meta">
                 <div>
-                  <h3>{p.href ? <Link href={p.href}>{label(p).title}</Link> : label(p).title}{p.sample && <span className="sample">{w.sample}</span>}</h3>
+                  <h3>{p.href ? <Link href={p.href}>{label(p).title}</Link> : label(p).title}{p.tag === "own" && <span className="sample">{w.own}</span>}</h3>
                   <p>{label(p).summary}</p>
                 </div>
                 <div className="stack">{p.stack[0]}<br />{p.stack[1]}</div>

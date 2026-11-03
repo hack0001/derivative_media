@@ -326,3 +326,13 @@ ul.ticks li::before{content:"";position:absolute;left:0;top:.42em;width:14px;hei
 .pillar-card:hover .go{transform:translateX(4px)}
 @media (max-width:760px){.pillars{grid-template-columns:1fr}}
 .page .faq{max-width:none}
+
+/* human sitemap */
+.sitemap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:36px 40px}
+.sitemap-grid h2{font-size:15px;font-family:var(--mono);font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
+.sitemap-grid ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.sitemap-grid a{text-decoration:none;color:var(--fg)}
+.sitemap-grid a:hover{color:var(--accent)}
+.muted-note{color:var(--muted);font-size:14px}
+.muted-note a{color:inherit}
+.foot-base a{color:inherit;text-underline-offset:3px}

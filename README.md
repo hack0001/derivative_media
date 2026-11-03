@@ -33,10 +33,14 @@ Welsh/English page pairs (for the language switch and hreflang) are listed in `p
 
 1. Push this folder to GitHub (already connected to Vercel).
 2. In Vercel, choose **Add New → Project**, import the repo and keep the defaults (framework: Next.js).
-3. Add environment variables for the contact form (Settings → Environment Variables):
-   - `RESEND_API_KEY` — from https://resend.com
-   - `CONTACT_TO` — where enquiries should arrive
-   - `CONTACT_FROM` — a sender on a domain you have verified in Resend, e.g. `Website <web@derivativemedia.co.uk>`
+3. Add environment variables for the contact form (Settings → Environment Variables). It sends through your own mailbox over SMTP:
+   - `SMTP_HOST`: your email provider's SMTP server (e.g. `smtp.office365.com` for Microsoft 365)
+   - `SMTP_PORT`: `587` (or `465` if your provider uses SSL)
+   - `SMTP_USER`: the sending mailbox, e.g. `hello@derivativemedia.co.uk`
+   - `SMTP_PASS`: its password, or an app password if two-step sign-in is on
+   - `SMTP_FROM` (optional): send from an alias, e.g. `hello@` when signing in as `admin@`
+   - `CONTACT_TO` (optional): where enquiries go; defaults to `SMTP_FROM`, then `SMTP_USER`
+   - Google Workspace: `SMTP_HOST=smtp.gmail.com`, `SMTP_PORT=465`, `SMTP_PASS` = a Google app password
 4. Deploy, then add your domain under Settings → Domains.
 
-Without `RESEND_API_KEY`, the form still accepts submissions but only writes them to the Vercel function log.
+Without the SMTP settings, the form still accepts submissions but only writes them to the Vercel function log.
