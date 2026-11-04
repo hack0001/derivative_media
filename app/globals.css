@@ -336,3 +336,7 @@ ul.ticks li::before{content:"";position:absolute;left:0;top:.42em;width:14px;hei
 .muted-note{color:var(--muted);font-size:14px}
 .muted-note a{color:inherit}
 .foot-base a{color:inherit;text-underline-offset:3px}
+
+.sm-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 24px 18px;min-width:0}
+.sm-card p{color:var(--muted);font-size:14.5px;margin:-6px 0 14px}
+.sm-card li.hub a{font-weight:600}

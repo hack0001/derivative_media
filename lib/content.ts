@@ -3,7 +3,7 @@
 
 export const site = {
   name: "Derivative Media Ltd",
-  url: "https://derivativemedia.co.uk",
+  url: "https://derivativemedia.co.uk", // the live address Google should use: must match Vercel's primary domain
   base: "Colwyn Bay",
   region: "Conwy",
   // Feeds the About page and Google's structured data.
