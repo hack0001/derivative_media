@@ -3,17 +3,17 @@
 > Web design and development studio in Colwyn Bay, North Wales, run by Tom Patel. Tailored websites, bilingual Welsh and English sites, community council websites, local SEO and AI search optimisation for businesses, councils and charities across North Wales.
 
 ## Services
-- [Websites for North Wales businesses](https://derivativemedia.co.uk/websites): what a good small-business site needs, cost drivers, process, choosing a developer
-- [Bilingual Welsh and English websites](https://derivativemedia.co.uk/websites/bilingual)
-- [Community council websites in Wales](https://derivativemedia.co.uk/for/community-councils)
-- [Local SEO and AI search](https://derivativemedia.co.uk/local-seo)
+- [Websites for North Wales businesses](https://www.derivativemedia.co.uk/websites): what a good small-business site needs, cost drivers, process, choosing a developer
+- [Bilingual Welsh and English websites](https://www.derivativemedia.co.uk/websites/bilingual)
+- [Community council websites in Wales](https://www.derivativemedia.co.uk/for/community-councils)
+- [Local SEO and AI search](https://www.derivativemedia.co.uk/local-seo)
 
 ## Guides
-- [Google Business Profile checklist](https://derivativemedia.co.uk/local-seo/google-business-profile)
-- [AI search for local businesses](https://derivativemedia.co.uk/local-seo/ai-search)
-- [What a Welsh community council website must include](https://derivativemedia.co.uk/for/community-councils/website-requirements)
+- [Google Business Profile checklist](https://www.derivativemedia.co.uk/local-seo/google-business-profile)
+- [AI search for local businesses](https://www.derivativemedia.co.uk/local-seo/ai-search)
+- [What a Welsh community council website must include](https://www.derivativemedia.co.uk/for/community-councils/website-requirements)
 
 ## About
-- [Tom Patel](https://derivativemedia.co.uk/about), based in Colwyn Bay
-- [Areas covered](https://derivativemedia.co.uk/areas): Colwyn Bay, Llanrwst and the Conwy Valley, Llansannan, Abergele, Denbigh and the rest of North Wales
-- Welsh-language pages: https://derivativemedia.co.uk/cy
+- [Tom Patel](https://www.derivativemedia.co.uk/about), based in Colwyn Bay
+- [Areas covered](https://www.derivativemedia.co.uk/areas): Colwyn Bay, Llanrwst and the Conwy Valley, Llansannan, Abergele, Denbigh and the rest of North Wales
+- Welsh-language pages: https://www.derivativemedia.co.uk/cy
