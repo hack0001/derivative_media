@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Year from "@/components/Year";
 import { site } from "@/lib/content";
 import { areas } from "@/lib/areas";
 import { articles } from "@/lib/articles";
@@ -42,7 +43,7 @@ export default function Footer({ lang = "en" }: { lang?: Lang }) {
         </div>
       </div>
       <div className="wrap foot-base">
-        <span>© {new Date().getFullYear()} {site.name} · <Link href="/sitemap">{cy ? "Map o'r wefan" : "Sitemap"}</Link></span>
+        <span>© <Year /> {site.name} · <Link href="/sitemap">{cy ? "Map o'r wefan" : "Sitemap"}</Link></span>
         <code>f′(you) &gt; 0</code>
       </div>
     </footer>

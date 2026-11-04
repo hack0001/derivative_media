@@ -16,11 +16,11 @@ export default function Nav({ lang = "en" }: { lang?: Lang }) {
     const isHome = path === n.home;
     const secs = n.links.map((l) => (isHome && l.href.includes("#") ? document.getElementById(l.href.split("#")[1]) : null));
     const fromPath = n.links.findIndex((l) => !l.href.includes("#") && l.href !== n.home && path.startsWith(l.href));
+    const hero = document.getElementById("top");
     let ticking = false;
     const update = () => {
       ticking = false;
       setScrolled(window.scrollY > 10);
-      const hero = document.getElementById("top");
       setOnHero(!!hero && window.scrollY < hero.offsetHeight - 64);
       let cur = fromPath;
       secs.forEach((s, i) => { if (s && s.getBoundingClientRect().top < window.innerHeight * 0.4) cur = i; });

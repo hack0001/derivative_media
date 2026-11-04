@@ -7,7 +7,7 @@ export function startHeroCurve(cv, readout) {
   const ctx = cv.getContext("2d");
   if (!ctx) return () => {};
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  let W = 0, H = 0, raf = 0, visible = true, mouseX = null, px = null, frameNo = 0;
+  let W = 0, H = 0, base = 0, amp = 0, raf = 0, visible = true, mouseX = null, px = null, frameNo = 0;
   let colors = {};
   const t0 = performance.now();
   let last = t0;
@@ -24,17 +24,18 @@ export function startHeroCurve(cv, readout) {
     W = cv.clientWidth; H = cv.clientHeight;
     cv.width = Math.max(1, Math.round(W * dpr)); cv.height = Math.max(1, Math.round(H * dpr));
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    base = H - Math.min(H * 0.17, 150); amp = Math.min(H * 0.06, 50); // the curve's band, clear of the text
+    readColors();
     if (reduce) draw(performance.now());
   };
 
   // geometry: the curve sits in a band along the bottom of the hero, clear of the text
   const k1 = 0.0052, k2 = 0.0123;
-  const band = () => ({ base: H - Math.min(H * 0.17, 150), amp: Math.min(H * 0.06, 50) });
   const g = (x, p) => Math.sin(x * k1 + p) + 0.5 * Math.sin(x * k2 - p * 1.3);
   const gp = (x, p) => k1 * Math.cos(x * k1 + p) + 0.5 * k2 * Math.cos(x * k2 - p * 1.3);
-  const y = (x, p) => { const b = band(); return b.base - b.amp * g(x, p); };
-  const slope = (x, p) => band().amp * gp(x, p); // maths slope, up = positive
-  const maxSlope = () => band().amp * (k1 + 0.5 * k2);
+  const y = (x, p) => base - amp * g(x, p);
+  const slope = (x, p) => amp * gp(x, p); // maths slope, up = positive
+  const maxSlope = () => amp * (k1 + 0.5 * k2);
 
   const host = cv.parentElement;
   const onMove = (e) => { if (e.pointerType === "mouse") mouseX = e.clientX - cv.getBoundingClientRect().left; };
@@ -47,10 +48,9 @@ export function startHeroCurve(cv, readout) {
   function draw(now) {
     const dt = Math.min(now - last, 50) / 1000; last = now;
     const el = (now - t0) / 1000;
-    if (frameNo++ % 60 === 0) readColors();
+    frameNo++;
     const p = reduce ? 0.8 : el * 0.11;                     // slow breathing of the curve
     const reveal = reduce ? 1 : ease((el - 2.2) / 1.8);      // draw-in once the typing has started
-    const { base, amp } = band();
 
     // where the point should be: follow the mouse, else glide left↔right with eased ends
     const s = 0.5 - 0.5 * Math.cos((el * 2 * Math.PI) / 16);
@@ -115,7 +115,8 @@ export function startHeroCurve(cv, readout) {
     raf = !reduce && visible ? requestAnimationFrame(frame) : 0;
   }
 
-  readColors();
+  const scheme = matchMedia("(prefers-color-scheme: light)");
+  scheme.addEventListener("change", readColors); // re-read colours only when the theme actually changes
   const ro = new ResizeObserver(resize); ro.observe(cv);
   const io = new IntersectionObserver(([e]) => {
     visible = e.isIntersecting;
@@ -127,6 +128,7 @@ export function startHeroCurve(cv, readout) {
 
   return () => {
     cancelAnimationFrame(raf); ro.disconnect(); io.disconnect();
+    scheme.removeEventListener("change", readColors);
     host.removeEventListener("pointermove", onMove);
     host.removeEventListener("pointerleave", onLeave);
   };

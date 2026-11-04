@@ -87,7 +87,7 @@ export default function WorkReel({ lang = "en" }: { lang?: Lang }) {
           <div className="progress" aria-hidden="true"><i ref={barRef} /></div>
         </div>
         <div className="track" ref={trackRef}>
-          {projects.map((p) => (
+          {projects.map((p) => { const l = label(p); return (
             <div className="proj" key={p.title}>
               <div className="frame">
                 <div className="bar"><i /><i /><i /><span>{p.url}</span></div>
@@ -95,13 +95,13 @@ export default function WorkReel({ lang = "en" }: { lang?: Lang }) {
               </div>
               <div className="meta">
                 <div>
-                  <h3>{p.href ? <Link href={p.href}>{label(p).title}</Link> : label(p).title}{p.tag === "own" && <span className="sample">{w.own}</span>}</h3>
-                  <p>{label(p).summary}</p>
+                  <h3>{p.href ? <Link href={p.href}>{l.title}</Link> : l.title}{p.tag === "own" && <span className="sample">{w.own}</span>}</h3>
+                  <p>{l.summary}</p>
                 </div>
                 <div className="stack">{p.stack[0]}<br />{p.stack[1]}</div>
               </div>
             </div>
-          ))}
+          ); })}
         </div>
       </div>
     </section>
