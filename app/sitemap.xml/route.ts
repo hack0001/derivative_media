@@ -2,7 +2,7 @@ import { siteIndex, twinOf } from "@/lib/siteIndex";
 import { site } from "@/lib/content";
 
 // /sitemap.xml for search engines. Standard sitemap protocol plus hreflang links for Welsh/English pairs.
-// The xml-stylesheet line only affects how it looks in a browser (see public/sitemap.xsl); crawlers ignore it.
+// Plain XML by design: browsers show it as code. People use the /sitemap page instead.
 
 export const dynamic = "force-static";
 
@@ -29,7 +29,6 @@ ${alt}  </url>`;
   });
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${urls.join("\n")}
 </urlset>
