@@ -58,6 +58,11 @@ export default function Hero({ lang = "en" }: { lang?: Lang }) {
           <span aria-hidden="true">{line2}</span>
           {onSecond && <span className="caret" aria-hidden="true" />}
         </p>
+        <p className="hero-lead">{h.lead}</p>
+        <div className="hero-cta">
+          <a className="btn" href={h.cta.href}>{h.cta.label}</a>
+          <a className="btn ghost" href={h.cta2.href}>{h.cta2.label}</a>
+        </div>
         <div className="hero-meta">
           {h.meta.map((m) => <span key={m}>{m}</span>)}
         </div>

@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { site } from "@/lib/content";
 import { t, type Lang } from "@/lib/i18n";
 
@@ -9,6 +9,8 @@ export default function Contact({ lang = "en" }: { lang?: Lang }) {
   const c = t(lang).contact;
   const [state, setState] = useState<State>({ kind: "idle" });
   const [copied, setCopied] = useState(false);
+  const shownAt = useRef(0); // when the form appeared, for the server's "too fast to be a person" check
+  useEffect(() => { shownAt.current = Date.now(); }, []);
 
   async function copy() {
     try { await navigator.clipboard.writeText(site.email); setCopied(true); setTimeout(() => setCopied(false), 1600); } catch { /* address is selectable */ }
@@ -17,7 +19,7 @@ export default function Contact({ lang = "en" }: { lang?: Lang }) {
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
-    const data = { ...Object.fromEntries(new FormData(form)), lang };
+    const data = { ...Object.fromEntries(new FormData(form)), lang, elapsed: Date.now() - shownAt.current };
     setState({ kind: "sending" });
     try {
       const res = await fetch("/api/contact", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });

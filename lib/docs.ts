@@ -151,6 +151,7 @@ const localSeo: Doc = {
     ] },
     blocks: [
       { type: "answer", text: "Local search has three places you can appear: Google's map results, the normal results underneath, and AI answers. Google says local results depend mainly on relevance, distance and prominence. You can't change distance, but you can improve the other two with a complete Business Profile, consistent details, reviews, mentions on other local sites, and a fast website that says clearly what you do and where." },
+      { type: "note", text: "Not sure where your business stands? Ask for a [free local SEO check](/free-seo-check) and I'll tell you what's broken, what's holding you back and what to fix first." },
       { type: "h2", text: "The three places you can appear" },
       { type: "list", items: [
         "**The map results.** The three businesses Google shows on a map for searches like \"electrician Abergele\". Driven mostly by your Google Business Profile.",
@@ -201,6 +202,7 @@ const localSeo: Doc = {
     ] },
     blocks: [
       { type: "answer", text: "Mae tri lle y gallwch chi ymddangos mewn chwilio lleol: canlyniadau map Google, y canlyniadau arferol oddi tano, ac atebion AI. Mae Google yn dweud bod canlyniadau lleol yn dibynnu'n bennaf ar berthnasedd, pellter ac amlygrwydd. Allwch chi ddim newid y pellter, ond gallwch chi wella'r ddau arall." },
+      { type: "note", text: "Ddim yn siŵr ble mae eich busnes yn sefyll? Gofynnwch am [wiriad SEO lleol am ddim](/cy/gwiriad-seo-am-ddim) ac fe wnaf ddweud wrthych beth sydd wedi torri, beth sy'n eich dal yn ôl a beth i'w drwsio gyntaf." },
       { type: "h2", text: "Y tri lle y gallwch chi ymddangos" },
       { type: "list", items: [
         "**Canlyniadau'r map.** Y tri busnes mae Google yn eu dangos ar fap ar gyfer chwiliadau fel \"trydanwr Abergele\". Eich Proffil Busnes Google sy'n gyrru hyn yn bennaf.",

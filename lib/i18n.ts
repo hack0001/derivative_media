@@ -22,7 +22,10 @@ const en = {
   },
   hero: {
     tagline: "website development",
-    meta: ["Websites that get found on Google", "Tailored, in Welsh and English", "Based in Colwyn Bay, working across North Wales"],
+    lead: "Tailored websites for businesses in Colwyn Bay and across North Wales, built to get found on Google.",
+    cta: { label: "Get a quote", href: "/#contact" },
+    cta2: { label: "Free SEO check", href: "/free-seo-check" },
+    meta: ["Welsh and English", "Fixed price up front", "You deal with the developer"],
   },
   manifesto: {
     eyebrow: "What we do",
@@ -126,7 +129,10 @@ const cy: Dict = {
   },
   hero: {
     tagline: "datblygu gwefannau",
-    meta: ["Gwefannau sy'n cael eu canfod ar Google", "Wedi'u teilwra, yn Gymraeg a Saesneg", "Ym Mae Colwyn, yn gweithio ar draws Gogledd Cymru"],
+    lead: "Gwefannau wedi'u teilwra ar gyfer busnesau ym Mae Colwyn ac ar draws Gogledd Cymru, wedi'u hadeiladu i gael eu canfod ar Google.",
+    cta: { label: "Cael pris", href: "/cy#contact" },
+    cta2: { label: "Gwiriad SEO am ddim", href: "/cy/gwiriad-seo-am-ddim" },
+    meta: ["Cymraeg a Saesneg", "Pris sefydlog o'r dechrau", "Rydych chi'n delio â'r datblygwr"],
   },
   manifesto: {
     eyebrow: "Beth rydyn ni'n ei wneud",
@@ -222,6 +228,7 @@ export const pairs: [string, string][] = [
   ["/for/community-councils", "/cy/cynghorau-cymuned"],
   ["/websites/bilingual", "/cy/gwefannau-dwyieithog"],
   ["/about", "/cy/amdanaf"],
+  ["/free-seo-check", "/cy/gwiriad-seo-am-ddim"],
 ];
 export const counterpart = (path: string): string | undefined => {
   const p = pairs.find(([e, c]) => e === path || c === path);

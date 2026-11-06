@@ -30,6 +30,7 @@ export function siteIndex(): IndexSection[] {
     ] },
     { key: "local-seo", heading: "Getting found on Google and AI search", pages: [
       { path: "/local-seo", title: docs.localSeo.en.metaTitle, priority: 0.9, changefreq: "monthly" },
+      { path: "/free-seo-check", title: "Free local SEO check", priority: 0.8, changefreq: "monthly" },
       ...articlesFor("local-seo").map((a) => ({ path: a.path, title: a.title, priority: 0.6, changefreq: "monthly" as const, lastmod: a.updated })),
     ] },
     { key: "councils", heading: "Community councils", pages: [
@@ -47,6 +48,7 @@ export function siteIndex(): IndexSection[] {
       { path: "/cy/seo-lleol", title: docs.localSeo.cy.metaTitle, cy: true, priority: 0.7, changefreq: "monthly" },
       { path: "/cy/cynghorau-cymuned", title: docs.councils.cy.metaTitle, cy: true, priority: 0.7, changefreq: "monthly" },
       { path: "/cy/amdanaf", title: docs.about.cy.metaTitle, cy: true, priority: 0.5, changefreq: "monthly" },
+      { path: "/cy/gwiriad-seo-am-ddim", title: "Gwiriad SEO lleol am ddim", cy: true, priority: 0.6, changefreq: "monthly" },
     ] },
     { key: "help", heading: "Help", pages: [
       { path: "/sitemap", title: "Sitemap", priority: 0.3, changefreq: "monthly" },

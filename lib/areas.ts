@@ -19,15 +19,16 @@ export type Area = {
 export const areas: Area[] = [
   {
     slug: "colwyn-bay",
-    name: "Colwyn Bay",
-    title: "Web design in Colwyn Bay",
-    metaTitle: "Web design Colwyn Bay",
-    description: "Tailored websites for Colwyn Bay, Rhos-on-Sea and Old Colwyn businesses, from a web developer based in the Bay. Fast, mobile-first and set up to be found on Google.",
+    name: "Rhos-on-Sea & Old Colwyn",   // links to this page use the neighbourhood names; "Colwyn Bay" itself points to the homepage
+    title: "Web design around Colwyn Bay: Rhos-on-Sea, Old Colwyn and Mochdre",
+    metaTitle: "Web design Rhos-on-Sea, Old Colwyn & around Colwyn Bay",
+    description: "Tailored websites for businesses in Rhos-on-Sea, Old Colwyn, Mochdre, Llysfaen and Llanddulas, from a web developer based in Colwyn Bay. Fast, mobile-first and set up to be found on Google.",
     lead: "Derivative Media is based in Colwyn Bay. I build fast websites, tailored to each business, along the Bay, from Old Colwyn to Rhos-on-Sea, and I'm close enough to meet you over a coffee on the prom.",
     who: ["Cafés, restaurants and takeaways", "Trades and home services covering the coast", "Shops on Station Road and in Rhos-on-Sea", "Accountants, solicitors and professional firms", "Clubs, charities and community groups"],
     blocks: [
       { type: "answer", text: "Derivative Media is a web design and development studio based in Colwyn Bay, run by Tom Patel. I build websites tailored to local businesses, not restricted by templates, and set them up to be found on Google and Google Maps." },
       { type: "h2", text: "Building for the Bay" },
+      { type: "p", text: "Derivative Media is based in Colwyn Bay itself (see the [homepage](/) for everything I do). This page covers the neighbourhoods and villages around it: Rhos-on-Sea and Penrhyn Bay to the west, Mochdre and Upper Colwyn Bay up the hill, and Old Colwyn, Llysfaen and Llanddulas to the east, along with the town centre around Station Road and Eirias Park." },
       { type: "p", text: "Colwyn Bay has a mix of high-street shops, cafés along the promenade, trades who cover the whole coast, and professional firms serving the wider county. Most of their customers find them the same way: a search on a phone, a look at Google Maps, and a quick check of the website before they call." },
       { type: "p", text: "That last step is where a lot of local sites lose the customer. A slow page, a menu that doesn't work on a phone, or opening hours that are two years out of date sends people straight back to the search results. I build sites that load in about a second and make the next step obvious." },
       { type: "h2", text: "What I focus on for Bay businesses" },
@@ -57,6 +58,7 @@ export const areas: Area[] = [
       { type: "h2", text: "A Welsh-speaking valley on the visitor trail" },
       { type: "p", text: "The Conwy Valley has a strong Welsh-speaking community and a steady stream of walkers, climbers and day-trippers heading for Eryri. Businesses here often need to speak to both, which makes a [properly bilingual website](/websites/bilingual) more than a nice extra." },
       { type: "p", text: "Outdoor and accommodation businesses also depend on good information: routes, availability, what to bring, what happens if the weather turns. Clear, well-structured pages help visitors plan and help Google match you to what they're searching for." },
+      { type: "p", text: "That covers the whole valley: Llanrwst and Llanddoged, Trefriw and Dolgarrog on the western side, Eglwysbach and Tal-y-Bont lower down, and Betws-y-Coed and Capel Curig at the head of the valley." },
       { type: "h2", text: "What I focus on in the valley" },
       { type: "list", items: [
         "**Properly bilingual.** Both languages on every page, with a language switch that keeps your place.",
@@ -114,6 +116,7 @@ export const areas: Area[] = [
       { type: "h2", text: "Locals and holidaymakers" },
       { type: "p", text: "Abergele's businesses often have two audiences: people who live here year-round, and visitors staying on the coast for a week or two each summer. The first group wants reliability and reviews; the second wants opening hours, directions and a phone number, fast." },
       { type: "p", text: "Trades in particular get much of their work from searches like \"electrician near me\". A quick site with clear service areas, real photos of your work and an obvious phone button turns those searches into calls." },
+      { type: "p", text: "I cover the town and the villages around it: Pensarn and Belgrano on the seafront, Towyn and Kinmel Bay to the east, and St George, Betws yn Rhos and Llanfair Talhaiarn inland." },
       { type: "h2", text: "What I focus on for Abergele businesses" },
       { type: "list", items: [
         "**Calls, not just clicks.** Tap-to-call buttons, clear service areas and short quote forms.",
@@ -140,6 +143,7 @@ export const areas: Area[] = [
       { type: "h2", text: "A market town and a farming vale" },
       { type: "p", text: "Denbigh is a market town with a castle on the hill and a high street of independent businesses, surrounded by the farms and villages of the Vale of Clwyd. Many businesses here sell to people who already know them, but the next customer still checks online first." },
       { type: "p", text: "For food producers and farm shops, a website can do more than list opening hours: it can take orders for collection, explain where the produce comes from and show up when someone searches for local food in the Vale." },
+      { type: "p", text: "Around the town I cover Henllan, Trefnant and Bodfari, and the Vale south towards Ruthin and north towards St Asaph." },
       { type: "h2", text: "What I focus on for Denbigh businesses" },
       { type: "list", items: [
         "**Tell your story.** Clean layouts that put your products, people and history first.",
@@ -158,7 +162,6 @@ export const areas: Area[] = [
 // Places covered without a full page yet. Promote one to a full area page when there's real local work to show.
 export const otherAreas: { name: string; note: string }[] = [
   { name: "Llandudno", note: "Hotels, guest houses, attractions and the shops of Mostyn Street." },
-  { name: "Rhos-on-Sea & Old Colwyn", note: "Covered from my base in Colwyn Bay, minutes away." },
   { name: "Conwy", note: "Independent shops, cafés and heritage tourism in the walled town." },
   { name: "Llandudno Junction & Deganwy", note: "Offices, trades and services along the estuary." },
   { name: "Llanfairfechan & Penmaenmawr", note: "Coastal villages with active town councils and small businesses." },
