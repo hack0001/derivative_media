@@ -14,7 +14,8 @@ export const site = {
   },
   brand: "derivative media",
   tagline: "website development",
-  email: "hello@derivativemedia.co.uk", // TODO: replace with your real address
+  email: "hello@derivativemedia.co.uk",
+  companyNumber: "10508867", // Companies House; shown in the footer (Companies Act trading disclosure)
 };
 
 // Portfolio projects shown in the homepage reel. `image` is a 16:10 screenshot in public/work/.

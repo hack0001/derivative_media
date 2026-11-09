@@ -43,7 +43,7 @@ export default function Footer({ lang = "en" }: { lang?: Lang }) {
         </div>
       </div>
       <div className="wrap foot-base">
-        <span>© <Year /> {site.name} · <Link href="/sitemap">{cy ? "Map o'r wefan" : "Sitemap"}</Link></span>
+        <span>© <Year /> {site.name} · {cy ? "Cofrestrwyd yng Nghymru a Lloegr, rhif cwmni" : "Registered in England and Wales, company no."} {site.companyNumber} · <Link href="/sitemap">{cy ? "Map o'r wefan" : "Sitemap"}</Link></span>
         <code>f′(you) &gt; 0</code>
       </div>
     </footer>

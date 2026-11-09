@@ -7,6 +7,7 @@ export const businessSchema = {
   "@id": `${site.url}/#business`,
   name: "Derivative Media",
   legalName: site.name,
+  identifier: { "@type": "PropertyValue", propertyID: "Companies House company number", value: site.companyNumber },
   url: site.url,
   email: site.email,
   description:
