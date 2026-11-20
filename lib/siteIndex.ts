@@ -36,6 +36,7 @@ export function siteIndex(): IndexSection[] {
     { key: "councils", heading: "Community councils", pages: [
       { path: "/for/community-councils", title: docs.councils.en.metaTitle, priority: 0.9, changefreq: "monthly" },
       ...articlesFor("councils").map((a) => ({ path: a.path, title: a.title, priority: 0.6, changefreq: "monthly" as const, lastmod: a.updated })),
+      { path: "/for/community-councils/website-checker", title: "Council website checker (free tool)", priority: 0.7, changefreq: "monthly" },
     ] },
     { key: "work", heading: "Work", pages: [
       { path: "/work/llansannan-community-council", title: "Case study: Llansannan Community Council", priority: 0.7, changefreq: "yearly" },

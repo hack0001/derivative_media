@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import { landingInfo } from "@/lib/landing";
 import { site } from "@/lib/content";
 import { t, type Lang } from "@/lib/i18n";
 
@@ -19,7 +20,7 @@ export default function Contact({ lang = "en" }: { lang?: Lang }) {
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
-    const data = { ...Object.fromEntries(new FormData(form)), lang, elapsed: Date.now() - shownAt.current };
+    const data = { ...Object.fromEntries(new FormData(form)), lang, elapsed: Date.now() - shownAt.current, ...landingInfo() };
     setState({ kind: "sending" });
     try {
       const res = await fetch("/api/contact", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });

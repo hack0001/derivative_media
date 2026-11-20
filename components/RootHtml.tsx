@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import JsonLd from "@/components/JsonLd";
+import LandingTracker from "@/components/LandingTracker";
 import { businessSchema, personSchema } from "@/lib/schema";
 import "../app/globals.css";
 
@@ -14,6 +15,7 @@ export default function RootHtml({ lang, children }: { lang: string; children: R
       <body>
         {children}
         <JsonLd data={[businessSchema, personSchema]} />
+        <LandingTracker />
         <Analytics /> {/* Vercel Web Analytics: page views and where visitors came from. No cookies, so no banner needed. */}
       </body>
     </html>

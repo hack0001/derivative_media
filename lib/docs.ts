@@ -258,6 +258,7 @@ const councils: Doc = {
     ] },
     blocks: [
       { type: "answer", text: "A Welsh community council website must publish contact details, councillors' details, meeting notices, minutes, audited accounts, public notices and the register of members' interests. I build sites that cover all of it, bilingually where needed, and that the clerk can update without help." },
+      { type: "note", text: "Check your own council's website against the legal requirements in two minutes with the free [council website checker](/for/community-councils/website-checker)." },
       { type: "h2", text: "Built for the clerk, and for residents" },
       { type: "p", text: "Most council websites fail in the same ways: minutes that stop a year ago, a meeting notice that went up late, a site that doesn't come up when residents search for the council's name, and an editing system only one person knows how to use." },
       { type: "p", text: "I build council sites around the publishing the law asks for, so adding an agenda or a set of minutes is a two-minute job. Everything is organised the way residents look for it, and the site is set up so Google finds it under the council's own name." },

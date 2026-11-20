@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { site } from "@/lib/content";
 import { freeCheck } from "@/lib/freeCheck";
 import type { Lang } from "@/lib/i18n";
+import { landingInfo } from "@/lib/landing";
 
 type State = { kind: "idle" } | { kind: "sending" } | { kind: "done" } | { kind: "error"; msg: string };
 
@@ -23,6 +24,7 @@ export default function FreeCheckForm({ lang = "en" }: { lang?: Lang }) {
       message: fields.notes?.trim() || "Free SEO check requested (no extra notes).",
       lang,
       elapsed: Date.now() - shownAt.current,
+      ...landingInfo(),
     };
     setState({ kind: "sending" });
     try {

@@ -39,7 +39,7 @@ function limited(ip: string) {
 }
 
 // Extra fields the free SEO check form sends, and how they are labelled in the email.
-const EXTRA: [string, string][] = [["business", "Business"], ["website", "Website"], ["town", "Town"], ["service", "Main service"]];
+const EXTRA: [string, string][] = [["business", "Business"], ["website", "Website"], ["town", "Town"], ["service", "Main service"], ["landing", "First page visited"], ["ref", "Came from"]];
 
 export async function POST(req: Request) {
   const origin = req.headers.get("origin");
